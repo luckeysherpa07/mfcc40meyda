@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MFCC with Meyda</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://v36p9.csb.app/style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Using MFCC with Meyda</h1>
+      <audio src="/tm.mp3" controls crossorigin="anonymous" volume="1"></audio>
+
+      <p>
+        As we're using <span class="code">requestAnimationFrame</span>, if the
+        window becomes obscured or hidden the rAF loop will pause until the
+        window is in view again. In that time BeatDetektor will no longer have
+        frames of audio sent to it and the BPM will become 0.
+      </p>
+      <h2 id="bpm"></h2>
+      <h2 id="kick"></h2>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
